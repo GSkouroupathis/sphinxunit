@@ -1,0 +1,3 @@
+# sphinxunit
+
+Distributed string matching.
