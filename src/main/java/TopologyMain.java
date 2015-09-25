@@ -1,10 +1,8 @@
-import spouts.WordReader;
+import spouts.StreamReader;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
-import backtype.storm.tuple.Fields;
-import bolts.WordCounter;
-import bolts.WordNormalizer;
+import bolts.StreamMatcher;
 
 
 public class TopologyMain {
@@ -12,20 +10,19 @@ public class TopologyMain {
          
         //Topology definition
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("word-reader",new WordReader());
-		builder.setBolt("word-normalizer", new WordNormalizer())
-			.shuffleGrouping("word-reader");
-		builder.setBolt("word-counter", new WordCounter(),1)
-			.fieldsGrouping("word-normalizer", new Fields("word"));
+		builder.setSpout("stream-reader", new StreamReader(4,3));
+		builder.setBolt("stream-matcher", new StreamMatcher())
+			.shuffleGrouping("stream-reader");
 		
         //Configuration
 		Config conf = new Config();
-		conf.put("wordsFile", args[0]);
+		conf.put("streamFile", args[0]);
 		conf.setDebug(false);
+
         //Topology run
 		conf.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 1);
 		LocalCluster cluster = new LocalCluster();
-		cluster.submitTopology("Getting-Started-Toplogie", conf, builder.createTopology());
+		cluster.submitTopology("SphinxUnit topology", conf, builder.createTopology());
 		Thread.sleep(1000);
 		cluster.shutdown();
 	}
