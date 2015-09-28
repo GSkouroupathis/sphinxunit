@@ -18,14 +18,15 @@ public class StreamReader extends BaseRichSpout {
 	private SpoutOutputCollector collector;
 	private FileReader fileReader;
 	private boolean completed = false;
-	private HashMap<Integer, String> toSend = new HashMap<Integer, String>();
-	private HashMap<Integer, String> messages = new HashMap<Integer, String>();
-	private int overlapSize, messageSize;
+	private HashMap<String, String> toSend = new HashMap<String, String>();
+	private HashMap<String, String> messages = new HashMap<String, String>();
+	private int chunkSize, overlapSize, messageSize;
 
 	/*
 	Constructor
 	*/
 	public StreamReader (int chunkSize, int overlapSize) {
+		this.chunkSize = chunkSize;
 		this.overlapSize = overlapSize;
 		this.messageSize = chunkSize + overlapSize;
 	}
@@ -45,11 +46,11 @@ public class StreamReader extends BaseRichSpout {
 			} catch (InterruptedException e) {
 				//Do nothing
 			}
-			return;
+			//return;
 		}
 		if(!toSend.isEmpty()){
-			for(Map.Entry<Integer, String> transactionEntry : toSend.entrySet()){
-				Integer trId = transactionEntry.getKey();
+			for(Map.Entry<String, String> transactionEntry : toSend.entrySet()){
+				String trId = transactionEntry.getKey();
 				String trMsg = transactionEntry.getValue();
 				collector.emit(new Values(trId, trMsg), trId);//,trId
 			}
@@ -91,7 +92,7 @@ public class StreamReader extends BaseRichSpout {
 						count++;
 						chrInd++;
 						if (count == messageSize) {
-							messages.put( (chunkBuilder.toString() + lineInd + msgInd).hashCode(), chunkBuilder.toString() );
+							messages.put(  Integer.toString(lineInd) + "-" + Integer.toString(msgInd), chunkBuilder.toString() );
 							chunkBuilder.setLength(0);
 							count = 0;
 							msgInd++;
@@ -100,7 +101,7 @@ public class StreamReader extends BaseRichSpout {
 					}
 					// Finally send remaining bits
 					if (chunkBuilder.length() != 0) {
-						messages.put( (chunkBuilder.toString() + lineInd + msgInd).hashCode(), chunkBuilder.toString() );
+						messages.put(  Integer.toString(lineInd) + "-" + Integer.toString(msgInd), chunkBuilder.toString() );
 						chunkBuilder.setLength(0);
 						count = 0;
 					}
@@ -133,7 +134,7 @@ public class StreamReader extends BaseRichSpout {
 
 	public void fail(Object msgId) {
 		System.out.println("## Failed to process " + msgId + ", retrying");
-		toSend.put((Integer) msgId, messages.get((Integer) msgId));
+		toSend.put((String)msgId, messages.get(msgId));
 	}
 
 	public void close() {}

@@ -15,18 +15,20 @@ import java.util.Map;
 public class ResultReducer implements IRichBolt {
 
     private OutputCollector collector;
-    private HashMap<Integer, String> badMessages;
+    private HashMap<String, String> badMessages;
+    private int inst = 0;
 
     public void prepare(Map stormConf, TopologyContext context,
                         OutputCollector collector) {
         this.collector = collector;
-        this.badMessages = new HashMap<Integer, String>();
+        this.badMessages = new HashMap<String, String>();
     }
 
 
     public void execute(Tuple input) {
-        Integer id = input.getInteger(0);
+        String id = input.getString(0);
         String msg = input.getString(1);
+        inst++;
         if (!badMessages.containsKey(id)) {
             badMessages.put(id, msg);
         }
@@ -48,12 +50,12 @@ public class ResultReducer implements IRichBolt {
         System.out.println("#####################");
         System.out.println();
         System.out.println("-- Bad Messages -- (Size " + badMessages.size() +")");
-        for(Map.Entry<Integer, String> entry : badMessages.entrySet()){
+        for(Map.Entry<String, String> entry : badMessages.entrySet()){
             System.out.println("## BAD ## " + entry.getKey() + ":" + entry.getValue());
         }
         System.out.println();
         System.out.println("#####################");
-        System.out.println("(Size " + badMessages.size() +")");
+        System.out.println("(Size " + badMessages.size() +") out of " + inst);
         System.out.println("#####################");
         System.out.println();
     }

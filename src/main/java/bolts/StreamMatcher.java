@@ -15,23 +15,23 @@ import java.util.Map;
 public class StreamMatcher implements IRichBolt {
 
     private OutputCollector collector;
-    private HashMap<Integer, String> messages;
-    private HashMap<Integer, String> badMessages;
+    private HashMap<String, String> messages;
+    private HashMap<String, String> badMessages;
 
     public void prepare(Map stormConf, TopologyContext context,
                         OutputCollector collector) {
         this.collector = collector;
-        this.messages = new HashMap<Integer, String>();
-        this.badMessages = new HashMap<Integer, String>();
+        this.messages = new HashMap<String, String>();
+        this.badMessages = new HashMap<String, String>();
     }
 
 
     public void execute(Tuple input) {
-        Integer id = input.getInteger(0);
+        String id = input.getString(0);
         String msg = input.getString(1);
         messages.put(id, msg);
 
-        if (msg.contains("and")) {
+        if (msg.contains("and") || msg.contains("And")) {
             badMessages.put(id, msg);
             collector.emit(new Values(id, msg));
         }
@@ -55,7 +55,7 @@ public class StreamMatcher implements IRichBolt {
         System.out.println("#####################");
         System.out.println();
         System.out.println("-- Messages -- (Size " + messages.size() +")");
-        for(Map.Entry<Integer, String> entry : messages.entrySet()){
+        for(Map.Entry<String, String> entry : messages.entrySet()){
             System.out.println("## MSG ## " + entry.getKey() + ":" + entry.getValue());
         }
         System.out.println();
