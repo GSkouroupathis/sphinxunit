@@ -1,3 +1,4 @@
+import bolts.ResultReducer;
 import spouts.StreamReader;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
@@ -10,10 +11,12 @@ public class TopologyMain {
          
         //Topology definition
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("stream-reader", new StreamReader(4,3));
-		builder.setBolt("stream-matcher", new StreamMatcher())
+		builder.setSpout("stream-reader", new StreamReader(1,2));
+		builder.setBolt("stream-matcher", new StreamMatcher(), 1)
 			.shuffleGrouping("stream-reader");
-		
+		builder.setBolt("result-reducer", new ResultReducer())
+			.shuffleGrouping("stream-matcher");
+
         //Configuration
 		Config conf = new Config();
 		conf.put("streamFile", args[0]);
