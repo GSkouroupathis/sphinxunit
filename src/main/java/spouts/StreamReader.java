@@ -1,6 +1,7 @@
 package spouts;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichSpout;
 import backtype.storm.tuple.Fields;
+import backtype.storm.tuple.MessageId;
 import backtype.storm.tuple.Values;
 
 public class StreamReader extends BaseRichSpout {
@@ -49,7 +51,7 @@ public class StreamReader extends BaseRichSpout {
 			for(Map.Entry<Integer, String> transactionEntry : toSend.entrySet()){
 				Integer trId = transactionEntry.getKey();
 				String trMsg = transactionEntry.getValue();
-				collector.emit(new Values(trMsg),trId);
+				collector.emit(new Values(trId, trMsg), trId);//,trId
 			}
 			/*
 			 * The nextTuple, ack and fail methods run in the same loop, so
@@ -99,6 +101,7 @@ public class StreamReader extends BaseRichSpout {
 					// Finally send remaining bits
 					if (chunkBuilder.length() != 0) {
 						messages.put( (chunkBuilder.toString() + lineInd + msgInd).hashCode(), chunkBuilder.toString() );
+						chunkBuilder.setLength(0);
 						count = 0;
 					}
 
@@ -120,16 +123,16 @@ public class StreamReader extends BaseRichSpout {
 	 * Declare the output field "word"
 	 */
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
-		declarer.declare(new Fields("line"));
+		declarer.declare(new Fields("id", "word"));
 	}
 
 	public void ack(Object msgId) {
 		toSend.remove(msgId);
-		System.out.println("######## Successfully processed " + msgId);
+		System.out.println("## Successfully processed " + msgId);
 	}
 
 	public void fail(Object msgId) {
-		System.out.println("######## Failed to process " + msgId + ", retrying");
+		System.out.println("## Failed to process " + msgId + ", retrying");
 		toSend.put((Integer) msgId, messages.get((Integer) msgId));
 	}
 

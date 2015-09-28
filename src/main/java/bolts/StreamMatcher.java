@@ -13,24 +13,25 @@ import java.util.Map;
 public class StreamMatcher implements IRichBolt {
 
     private OutputCollector collector;
-    private ArrayList<String> messages;
-    private ArrayList<String> badMessages;
+    private HashMap<Integer, String> messages;
+    private HashMap<Integer, String> badMessages;
 
     public void prepare(Map stormConf, TopologyContext context,
                         OutputCollector collector) {
         this.collector = collector;
-        this.messages = new ArrayList<String>();
-        this.badMessages = new ArrayList<String>();
+        this.messages = new HashMap<Integer, String>();
+        this.badMessages = new HashMap<Integer, String>();
     }
 
 
     public void execute(Tuple input) {
-        String str = input.getString(0);
-        messages.add(str);
+        Integer id = input.getInteger(0);
+        String msg = input.getString(1);
+        messages.put(id, msg);
         collector.ack(input);
 
-        if (str.contains("aaa") || str.contains("tbi")) {
-            badMessages.add(str);
+        if (msg.contains("aaa") || msg.contains("tbi")) {
+            badMessages.put(id, msg);
         }
     }
 
@@ -43,16 +44,24 @@ public class StreamMatcher implements IRichBolt {
     }
 
     public void cleanup() {
-        System.out.println("-- Stream Matcher --");
-        for(String entry : messages){
-            System.out.println("#####-->>" + entry);
+        System.out.println();
+        System.out.println("#####################");
+        System.out.println("Stream Matcher Report");
+        System.out.println("#####################");
+        System.out.println();
+        System.out.println("-- Messages --");
+        for(Map.Entry<Integer, String> entry : messages.entrySet()){
+            System.out.println("## MSG ## " + entry.getKey() + ":" + entry.getValue());
         }
-        System.out.println("####<<<<" + messages.size());
+        System.out.println();
         System.out.println("-- Bad Messages --");
-        for(String entry : badMessages){
-            System.out.println("XXXXXX-->>" + entry);
+        for(Map.Entry<Integer, String> entry : badMessages.entrySet()){
+            System.out.println("## BAD ## " + entry.getKey() + ":" + entry.getValue());
         }
-
+        System.out.println();
+        System.out.println("#####################");
+        System.out.println("#####################");
+        System.out.println();
     }
 
 }
