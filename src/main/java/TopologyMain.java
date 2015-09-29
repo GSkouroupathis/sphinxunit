@@ -12,9 +12,9 @@ public class TopologyMain {
         //Topology definition
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("stream-reader", new StreamReader(1,2));
-		builder.setBolt("stream-matcher", new StreamMatcher(), 1)
+		builder.setBolt("stream-matcher", new StreamMatcher())
 			.shuffleGrouping("stream-reader");
-		builder.setBolt("result-reducer", new ResultReducer(), 1)
+		builder.setBolt("result-reducer", new ResultReducer())
 			.shuffleGrouping("stream-matcher");
 
         //Configuration
@@ -26,7 +26,7 @@ public class TopologyMain {
 		conf.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 1);
 		LocalCluster cluster = new LocalCluster();
 		cluster.submitTopology("SphinxUnit topology", conf, builder.createTopology());
-		Thread.sleep(2000);
+		Thread.sleep(4500);
 		cluster.shutdown();
 	}
 }

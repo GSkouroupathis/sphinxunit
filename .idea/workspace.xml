@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71788639-e47e-41f1-a920-0a550f15d9f9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/in.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/words.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Getting-Started-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/Getting-Started-0.0.1-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bolts/ResultReducer.java" afterPath="$PROJECT_DIR$/src/main/java/bolts/ResultReducer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bolts/StreamMatcher.java" afterPath="$PROJECT_DIR$/src/main/java/bolts/StreamMatcher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spouts/StreamReader.java" afterPath="$PROJECT_DIR$/src/main/java/spouts/StreamReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TopologyMain.java" afterPath="$PROJECT_DIR$/src/main/java/TopologyMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/words.txt" afterPath="$PROJECT_DIR$/src/main/resources/words.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/words.txt" afterPath="$PROJECT_DIR$/target/classes/words.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Getting-Started.iws" />
@@ -31,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TopologyMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TopologyMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TopologyMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.41810346">
+              <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="words.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/words.txt">
+      <file leaf-file-name="in.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/in.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.333333">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.2962964">
+              <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -57,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/bolts/ResultReducer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,27 +71,37 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/bolts/StreamMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+              <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
+                <element signature="e#1301#1310#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StreamReader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomMatch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/structures/CustomMatch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+              <folding>
+                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StreamReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spouts/StreamReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48324743">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="89" column="82" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#635#651#0" expanded="true" />
-                <element signature="e#710#726#0" expanded="true" />
-                <element signature="e#3481#3482#0" expanded="true" />
-                <element signature="e#3530#3531#0" expanded="true" />
+                <element signature="e#632#652#0" expanded="true" />
+                <element signature="e#715#735#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,11 +128,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/structures/Tuple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bolts/ResultReducer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/words.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/bolts/StreamMatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TopologyMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomMsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/structures/CustomMsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/structures/customMatch.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/in.txt" />
         <option value="$PROJECT_DIR$/src/main/java/spouts/StreamReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/structures/CustomMatch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bolts/StreamMatcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bolts/ResultReducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TopologyMain.java" />
       </list>
     </option>
   </component>
@@ -267,6 +284,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="structures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Getting-Started" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sphinxunit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Getting-Started" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sphinxunit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bolts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -295,7 +364,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TopologyMain" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/words.txt" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/in.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -575,12 +644,12 @@
       <option name="number" value="Default" />
       <updated>1443178163698</updated>
       <workItem from="1443178165748" duration="17001000" />
-      <workItem from="1443431246160" duration="8244000" />
+      <workItem from="1443431246160" duration="18524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25245000" />
+    <option name="totallyTimeSpent" value="35525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -593,7 +662,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3097015" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3880597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -612,12 +681,20 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -636,7 +713,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/words.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/in.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
@@ -650,10 +727,8 @@
           <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#635#651#0" expanded="true" />
-            <element signature="e#710#726#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3530#3531#0" expanded="true" />
+            <element signature="e#632#652#0" expanded="true" />
+            <element signature="e#715#735#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,8 +739,7 @@
           <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1301#1310#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -731,12 +805,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TopologyMain.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33247423">
+          <caret line="140" column="6" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/storm/storm/0.7.1/storm-0.7.1.jar!/backtype/storm/LocalCluster.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1789052">
+          <caret line="164" column="16" selection-start-line="163" selection-start-column="42" selection-end-line="164" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/CustomMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41474655">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/storm/storm/0.7.1/storm-0.7.1.jar!/backtype/storm/daemon/worker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.2.0/clojure-1.2.0.jar!/clojure/lang/LazySeq.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33169532">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spouts/StreamReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="82" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#632#652#0" expanded="true" />
+            <element signature="e#715#735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/CustomMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding>
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -744,43 +871,38 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/bolts/StreamMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1301#1310#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/words.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bolts/ResultReducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spouts/StreamReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/in.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48324743">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        <state vertical-scroll-proportion="-2.2962964">
+          <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TopologyMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41810346">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#635#651#0" expanded="true" />
-            <element signature="e#710#726#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3530#3531#0" expanded="true" />
           </folding>
         </state>
       </provider>
