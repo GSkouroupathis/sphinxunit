@@ -11,7 +11,7 @@ public class TopologyMain {
          
         //Topology definition
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("stream-reader", new StreamReader(1,2));
+		builder.setSpout("stream-reader", new StreamReader(8,12));
 		builder.setBolt("stream-matcher", new StreamMatcher())
 			.shuffleGrouping("stream-reader");
 		builder.setBolt("result-reducer", new ResultReducer())
