@@ -5,10 +5,14 @@ import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
 import bolts.StreamMatcher;
 
+import other.*;
 
 public class SphinxUnit {
 	public static void main(String[] args) throws InterruptedException {
-         
+
+        PcapTester x = new PcapTester();
+
+        /*
         //Topology definition
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("stream-reader", new StreamReader(1,2));
@@ -28,5 +32,6 @@ public class SphinxUnit {
 		cluster.submitTopology("SphinxUnit topology", conf, builder.createTopology());
 		Thread.sleep(4500);
 		cluster.shutdown();
+		*/
 	}
 }
