@@ -1,3 +1,2 @@
 # sphinxunit
-
 Distributed string matching.
