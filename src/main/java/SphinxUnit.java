@@ -6,7 +6,7 @@ import backtype.storm.topology.TopologyBuilder;
 import bolts.StreamMatcher;
 
 
-public class TopologyMain {
+public class SphinxUnit {
 	public static void main(String[] args) throws InterruptedException {
          
         //Topology definition

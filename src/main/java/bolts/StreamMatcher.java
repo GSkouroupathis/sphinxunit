@@ -37,10 +37,10 @@ public class StreamMatcher implements IRichBolt {
         messages.put(id, customMsg);
 
         ArrayList<Integer> foundIndeces = new ArrayList<Integer>();
-        int index = msg.indexOf("and");
+        int index = msg.indexOf("his");
         while (index >= 0) {
             foundIndeces.add(index);
-            index = msg.indexOf("and", index + 1);
+            index = msg.indexOf("his", index + 1);
         }
         for (int foundInd : foundIndeces) {
             int matchID = new String(customMsg.lineId + "-" + customMsg.charId + foundInd).hashCode();
